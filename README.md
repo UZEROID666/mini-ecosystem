@@ -55,11 +55,7 @@ Generates random greetings for the user.
 
 ## ▶️ Running the Project
 
-Make sure Python is installed, then run:
-
-```bash
-python ecosystem.py
-```
+run ecosystem.exe
 
 ## 🎯 Project Goal
 
