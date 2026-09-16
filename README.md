@@ -52,6 +52,7 @@ Generates random greetings for the user.
 Windows run ecosystem.exe
 
 Linux run ecosystem
+
 🎯 Project Goal
 
 Mini-Ecosystem is primarily a learning and experimental project.
