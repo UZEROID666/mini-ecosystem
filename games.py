@@ -10,50 +10,51 @@ games = """
 print(games)
 import random
 gc = input("Choice the game: ")
-while True:
-    print("""
-    ┌───────────────────────┐
-    │     SLOT MACHINE      │
-    │                       │
-    │  1. Spin 🎰           │
-    │  2. Exit              │
-    └───────────────────────┘
-    """)
+if gc == "1" or gc == "Slot machine":
+    while True:
+        print("""
+        ┌───────────────────────┐
+        │     SLOT MACHINE      │
+        │                       │
+        │  1. Spin 🎰           │
+        │  2. Exit              │
+        └───────────────────────┘
+        """)
 
-    choice = input("Choose: ")
+        choice = input("Choose: ")
 
-    if choice == "2":
-        print("Exiting Slot Machine...")
-        break
+        if choice == "2":
+            print("Exiting Slot Machine...")
+            break
 
-    elif choice == "1":
-        choicer = ("7", "🍒", "💀", "🏆")
+        elif choice == "1":
+            choicer = ("7", "🍒", "💀", "🏆")
 
-        slot1 = random.choice(choicer)
-        slot2 = random.choice(choicer)
-        slot3 = random.choice(choicer)
+            slot1 = random.choice(choicer)
+            slot2 = random.choice(choicer)
+            slot3 = random.choice(choicer)
 
-        print(slot1, slot2, slot3)
+            print(slot1, slot2, slot3)
 
-        if slot1 == "7" and slot2 == "7" and slot3 == "7":
-            print("WOOOOW, YOU X3 WIN JACKPOT!!!")
+            if slot1 == "7" and slot2 == "7" and slot3 == "7":
+                print("WOOOOW, YOU X3 WIN JACKPOT!!!")
 
-        elif slot1 == "🍒" and slot2 == "🍒" and slot3 == "🍒":
-            print("My Congratulations, You WIN Jackpot")
+            elif slot1 == "🍒" and slot2 == "🍒" and slot3 == "🍒":
+                print("My Congratulations, You WIN Jackpot")
 
-        elif slot1 == "🏆" and slot2 == "🏆" and slot3 == "🏆":
-            print("My Congratulations, You WIN X2 JACKPOT")
+            elif slot1 == "🏆" and slot2 == "🏆" and slot3 == "🏆":
+                print("My Congratulations, You WIN X2 JACKPOT")
 
-        elif slot1 == "💀" and slot2 == "💀" and slot3 == "💀":
-            print("You will die. Of Course I am Joking or not?")
+            elif slot1 == "💀" and slot2 == "💀" and slot3 == "💀":
+                print("You will die. Of Course I am Joking or not?")
+
+            else:
+                print("You lose your chance")
 
         else:
-            print("You lose your chance")
-
-    else:
-        print("Invalid choice!")
+            print("Invalid choice!")
         
-if gc == "2" or gc == "P.S.R":
+elif gc == "2" or gc == "P.S.R":
     while True:
         psr = "rock" , "paper" , "scissors"
         choicer = random.choice(psr)
@@ -87,7 +88,7 @@ if gc == "2" or gc == "P.S.R":
             print("You win!")
         else:
             print("Wrong word❌")
-if gc == "3" or gc == "Guess the number":
+elif gc == "3" or gc == "Guess the number":
     rn = random.randint(1, 1000)
     pn = int(input("Guess the number (1 , 1000): "))
     if rn == pn:
