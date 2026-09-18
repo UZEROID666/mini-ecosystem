@@ -1,7 +1,29 @@
 name: Build Windows EXE
 
-on: [push]
+on:
+  push:
 
 jobs:
   build:
     runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build EXE
+        run: pyinstaller --onefile ecosystem.py
+
+      - name: Upload EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: ecosystem-exe
+          path: dist/ecosystem.exe
