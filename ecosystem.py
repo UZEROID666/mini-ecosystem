@@ -12,6 +12,7 @@ apps = """
           │   │ 1. Calcypython      │ │
           │   │ 2. Old Calculator   │ │    
           │   │ 3. Games            │ │
+          │   │ 4. Calendar         │ │
           │   └─────────────────────┘ │
           └───────────────────────────┘
           """
@@ -46,5 +47,10 @@ if choose == "1" or choose == "Calcypython":
     import Calcypython  
 elif choose == "2" or choose == "Old Calculator":
     import Calcyold
-elif choose == "3" or "Games":
+elif choose == "3" or choose == "Games":
     import games
+elif choose == "4" or "Calendar":
+   import calendar
+from datetime import datetime
+
+print(calendar.calendar(datetime.now().year))

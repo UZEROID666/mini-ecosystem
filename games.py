@@ -98,3 +98,6 @@ elif gc == "3" or gc == "Guess the number":
     else:
         print(f"Sorry but my number is {rn}")
         import games
+else:
+    print("Invalid Choose ❌")
+    import games
