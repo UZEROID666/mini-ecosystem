@@ -1,4 +1,4 @@
-name: Build Windows EXE
+name: Build Mini-Ecosystem
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  build-windows:
     runs-on: windows-latest
 
     steps:
@@ -24,11 +24,64 @@ jobs:
       - name: Install PyInstaller
         run: pip install pyinstaller
 
-      - name: Build EXE
+      - name: Build Windows EXE
         run: pyinstaller --onefile ecosystem.py
 
-      - name: Create ZIP
-        run: Compress-Archive -Path dist/ecosystem.exe -DestinationPath ecosystem.zip
+      - name: Create Windows ZIP
+        run: Compress-Archive -Path dist/ecosystem.exe -DestinationPath ecosystem-windows.zip
+
+      - name: Upload Windows artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: ecosystem-windows.zip
+
+
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build Linux executable
+        run: pyinstaller --onefile ecosystem.py
+
+      - name: Rename Linux executable
+        run: mv dist/ecosystem dist/ecosystem-linux
+
+      - name: Upload Linux artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-build
+          path: dist/ecosystem-linux
+
+
+  release:
+    needs:
+      - build-windows
+      - build-linux
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download Windows build
+        uses: actions/download-artifact@v4
+        with:
+          name: windows-build
+
+      - name: Download Linux build
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-build
 
       - name: Update Latest Release
         uses: softprops/action-gh-release@v2
@@ -36,5 +89,7 @@ jobs:
           tag_name: latest
           name: Mini-Ecosystem Latest
           prerelease: false
-          files: ecosystem.zip
           make_latest: true
+          files: |
+            ecosystem-windows.zip
+            ecosystem-linux
