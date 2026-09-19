@@ -49,7 +49,7 @@ elif choose == "2" or choose == "Old Calculator":
     import Calcyold
 elif choose == "3" or choose == "Games":
     import games
-elif choose == "4" or "Calendar":
+elif choose == "4" or  choose == "Calendar":
    import calendar
 from datetime import datetime
 
