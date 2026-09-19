@@ -89,15 +89,14 @@ elif gc == "2" or gc == "P.S.R":
         else:
             print("Wrong word❌")
 elif gc == "3" or gc == "Guess the number":
-    rn = random.randint(1, 1000)
-    pn = int(input("Guess the number (1 , 1000): "))
-    if rn == pn:
-        print(f"My number is {rn}")
-        print("Wow , You Win!")
-        import games
-    else:
-        print(f"Sorry but my number is {rn}")
-        import games
+    while True:
+        rn = random.randint(1, 1000)
+        pn = int(input("Guess the number (1 , 1000): "))
+        if rn == pn:
+            print(f"My number is {rn}")
+            print("Wow , You Win!")
+        else:
+            print(f"Sorry but my number is {rn}")
 else:
     print("Invalid Choose ❌")
     import games
