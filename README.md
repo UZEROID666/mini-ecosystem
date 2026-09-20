@@ -47,11 +47,15 @@ Generates random greetings for the user.
     if / elif / else
     Python modules and import
 
+#Languages 
+Russian (ru)
+English (en)
+
 # ▶️ Running the Project
 
 Windows run ecosystem.exe
 
-Linux run ecosystem
+Linux run ecosystem like executable file
 
 🎯 Project Goal
 
@@ -60,6 +64,6 @@ Mini-Ecosystem is primarily a learning and experimental project.
 The main idea is to keep the launcher simple while adding new programs as separate Python modules.
 
 # Instead of putting everything into one huge file, each part of the ecosystem can have its own module.
-📜 License
+#📜 License
 
 This project is open source and intended for educational and experimental purposes.
