@@ -187,15 +187,15 @@ elif language == "1.ru" or language == "ru" or language == "1":
             elif choicer == "scissors" and player == "ножницы":
                 print(choicer)
                 print("Это ничья")
-            elif choicer == "scissors" and player == "ножницы":
+            elif choicer == "scissors" and player == "камень":
                 print(choicer)
                 print("Ты проиграл :(")
             elif choicer == "scissors" and player == "камень":
                 print(choicer)
-                print("Ты побели!")
+                print("Ты победил!")
             else:
                 print("Ошибка❌")
-    elif gc == "3" or gc == "Guess the number":
+    elif gc == "3" or gc == "Угадай число":
         while True:
             rn = random.randint(1, 1000)
             pn = int(input("Угадай число (1 , 1000): "))
