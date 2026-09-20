@@ -73,7 +73,7 @@ elif language == "1.ru" or language == "ru" or language == "1":
     
     
     random_helloword = [
-        "Привет, " + name + "Добро пожаловать в маленькую экосистему",
+        "Привет, " + name + "! Добро пожаловать в маленькую экосистему",
         "Ооо тут, " + name + "! Проведём вместе время в экосистеме!",
         "Ооо Привет, " + name + "! Желаю хорошего дня!"
     ]
@@ -84,7 +84,7 @@ elif language == "1.ru" or language == "ru" or language == "1":
     
     print(apps)
     
-    choose = input("Choose an app: ")
+    choose = input("Выберите Приложения: ")
     if choose == "1" or choose == "Calcypython":
         import Calcypython  
     elif choose == "2" or choose == "Old Calculator":
