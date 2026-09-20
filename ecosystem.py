@@ -20,7 +20,9 @@ apps = """
 import random
 
 language = input("Choice language (1.ru/2.en):")
-
+while not language:
+    print("Choice the language !!!!!!!!!!!!!!!!!")
+    language = input("Choice language (1.ru/2.en):")
 
 if language == "2.en" or language == "2" or language == "en":
     print("Ecosystem alpha starting...")
@@ -32,6 +34,9 @@ if language == "2.en" or language == "2" or language == "en":
     print("Current date and time:", time)
 
     name = input("Please enter your name: ")
+    while not name:
+        print("I think you forgot to enter your name... Maybe?")
+        name = input("Please enter your name: ")
 
 
     random_helloword = [
@@ -70,7 +75,9 @@ elif language == "1.ru" or language == "ru" or language == "1":
     print("Нынешнее дата и время:", time)
     
     name = input("Пожалуйста введите своё имя: ")
-    
+    while not name:
+        print("Я думаю вы забыли ввести имя... Наверное?")
+        name = input("Пожалуйста введите своё имя: ")
     
     random_helloword = [
         "Привет, " + name + "! Добро пожаловать в маленькую экосистему",
