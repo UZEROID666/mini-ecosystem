@@ -8,6 +8,16 @@ games = """
                   └───────────────────────────┘
 """
 
+games_ru = """
+                  ┌───────────────────────────┐
+                  │   ┌─────────────────────┐ │
+                  │   │ 1. Слот машина      │ │
+                  │   │ 2. К.Н.Б            │ │
+                  │   │ 3.Угадай число      │ │
+                  │   └─────────────────────┘ │
+                  └───────────────────────────┘
+"""
+
 import random
 from ecosystem import name, language 
 if language == "2.en" or language == "2" or language == "en":
@@ -106,17 +116,9 @@ if language == "2.en" or language == "2" or language == "en":
         import games
 
 elif language == "1.ru" or language == "ru" or language == "1":
-    print(f"{name} welcome")
+    print(f"{name} Уэлком")
+    print(games_ru)
     gc = input("Выберите игру: ")
-    print("""
-                  ┌───────────────────────────┐
-                  │   ┌─────────────────────┐ │
-                  │   │ 1. Слот машина      │ │
-                  │   │ 2. К.Н.Б            │ │
-                  │   │ 3.Угадай число      │ │
-                  │   └─────────────────────┘ │
-                  └───────────────────────────┘
-""")
     if gc == "1" or gc == "Слот машина":
         while True:
             print("""
