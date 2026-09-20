@@ -19,39 +19,81 @@ apps = """
 
 import random
 
-print("Ecosystem alpha starting...")
-
-print(welcome)
-print("My Github profile link : https://github.com/uzeroid666")
-from datetime import datetime
-time = datetime.now()
-print("Current date and time:", time)
-
-name = input("Please enter your name: ")
+language = input("Choice language (1.ru/2.en):")
 
 
-random_helloword = [
-    "Hello, " + name + "! Welcome to Mini-Ecosystem!",
-    "Hi there, " + name + "! Enjoy your time in the ecosystem!",
-    "Greetings, " + name + "! Hope you have a great day!"
-]
+if language == "2.en" or language == "2" or language == "en":
+    print("Ecosystem alpha starting...")
 
-choice = random.choice(random_helloword)
+    print("welcome")
+    print("My Github profile link : https://github.com/uzeroid666")
+    from datetime import datetime
+    time = datetime.now()
+    print("Current date and time:", time)
 
-print(choice)
+    name = input("Please enter your name: ")
 
-print(apps)
 
-choose = input("Choose an app: ")
-if choose == "1" or choose == "Calcypython":
-    import Calcypython  
-elif choose == "2" or choose == "Old Calculator":
-    import Calcyold
-elif choose == "3" or choose == "Games":
-    import games
-elif choose == "4" or  choose == "Calendar":
-   import calendar
-from datetime import datetime
+    random_helloword = [
+        "Hello, " + name + "! Welcome to Mini-Ecosystem!",
+        "Hi there, " + name + "! Enjoy your time in the ecosystem!",
+        "Greetings, " + name + "! Hope you have a great day!"
+    ]
 
-print(calendar.calendar(datetime.now().year))
-import ecosystem
+    choice = random.choice(random_helloword)
+
+    print(choice)
+
+    print(apps)
+
+    choose = input("Choose an app: ")
+    if choose == "1" or choose == "Calcypython":
+        import Calcypython  
+    elif choose == "2" or choose == "Old Calculator":
+        import Calcyold
+    elif choose == "3" or choose == "Games":
+        import games
+    elif choose == "4" or  choose == "Calendar":
+        import calendar
+        from datetime import datetime
+
+        print(calendar.calendar(datetime.now().year))
+    import ecosystem
+
+elif language == "1.ru" or language == "ru" or language == "1":
+    print("Ecosystem alpha starting...")
+    
+    print("Добро пожаловать")
+    print("ССылка на мой Github Профиль (там же выходят обновления) : https://github.com/uzeroid666")
+    from datetime import datetime
+    time = datetime.now()
+    print("Нынешнее дата и время:", time)
+    
+    name = input("Пожалуйста введите своё имя: ")
+    
+    
+    random_helloword = [
+        "Привет, " + name + "Добро пожаловать в маленькую экосистему",
+        "Ооо тут, " + name + "! Проведём вместе время в экосистеме!",
+        "Ооо Привет, " + name + "! Желаю хорошего дня!"
+    ]
+    
+    choice = random.choice(random_helloword)
+    
+    print(choice)
+    
+    print(apps)
+    
+    choose = input("Choose an app: ")
+    if choose == "1" or choose == "Calcypython":
+        import Calcypython  
+    elif choose == "2" or choose == "Old Calculator":
+        import Calcyold
+    elif choose == "3" or choose == "Games":
+        import games
+    elif choose == "4" or choose == "Calendar":
+        import calendar
+        from datetime import datetime
+    
+        print(calendar.calendar(datetime.now().year))
+    import ecosystem

@@ -35,30 +35,11 @@ error = """
           └──────────────────────┘
 """
 
-lang = """
-          ┌──────────────────────┐
-          │   ┌────────────────┐ │
-          │   │ Language       │ │ 
-          │   └────────────────┘ │
-          │                      │
-          │   ─── ─── ───   ───  │
-          │  │ 7 │ 8 │ 9 │ │ + │ │
-          │  ├───┼───┼───┤ ├───┤ │
-          │  │ 4 │ 5 │ 6 │ │ − │ │
-          │  ├───┼───┼───┤ ├───┤ │
-          │  │ 1 │ 2 │ 3 │ │ x │ │
-          │  ├───┼───┼───┤ ├───┤ │
-          │  │ · │ 0 │ = │ │ / │ │
-          │  └───┴───┴───┘ └───┘ │
-          └──────────────────────┘
-"""
-print(lang)
+from ecosystem import language
 
-print("Выберите язык: Русский (ru) , english (en) , o'zbekcha (uz)")
-
-language = input("Choose language (ru/en/uz): ")
-
-if language == "ru":
+if language == "1.ru" or language == "ru" or language == "1":
+    from ecosystem import name
+    print(f"{name} Добро пожаловать")
     while True:
    
         print("""
@@ -126,7 +107,10 @@ if language == "ru":
         else:
             print(error)
 
-elif language == "en":
+
+elif language == "2.en" or language == "2" or language == "en":
+    from ecosystem import name
+    print(f"{name} Welcome")
     while True:
    
         print("""
@@ -190,74 +174,6 @@ elif language == "en":
             quit = input("Do you want to quit? (yes/no): ")
             if quit == "yes":
                 print("Exiting the program...")
-                break
-        else:
-            print(error)
-
-elif language == "uz":
-    while True:
-   
-        print("""
-        + bu qo'shish
-        - bu ayirish
-        * bu ko'paytirish
-        / bu bo'lish
-        // bu butun sonli bo'lish
-        ** bu darajaga ko'tarish
-        % bu qoldiq
-        """)
-
-        num1 = input("Birinchi sonni kiriting: ")
-        num2 = input("Ikkinchi sonni kiriting: ")
-        operation = input("Amalni kiriting (+, -, *, /, //, **, %): ")
-        if operation == "+":
-            print(calculating)
-            print('Natija: ', float(num1) + float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                print("Programma yopilishi...")
-                break
-        elif operation == "-":
-            print(calculating)
-            print('Natija: ', float(num1) - float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                            print("Programma yopilishi...")
-                            break
-        elif operation == "*":
-            print(calculating)
-            print('Natija: ', float(num1) * float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                            print("Programma yopilishi...")
-                            break
-        elif operation == "/":
-            print(calculating)
-            print('Natija: ', float(num1) / float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                print("Programma yopilishi...")
-                break
-        elif operation == "//":
-            print(calculating)
-            print('Natija: ', float(num1) // float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                print("Programma yopilishi...")
-                break
-        elif operation == "**":
-            print(calculating)
-            print('Natija: ', float(num1) ** float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                print("Programma yopilishi...")
-                break
-        elif operation == "%":
-            print(calculating)
-            print('Natija: ', float(num1) % float(num2))
-            quit = input("Programmadan chiqishni istaysizmi? (yes/no): ")
-            if quit == "yes":
-                print("Programma yopilishi...")
                 break
         else:
             print(error)
