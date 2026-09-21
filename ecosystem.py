@@ -17,6 +17,17 @@ apps = """
           └───────────────────────────┘
           """
 
+apps_ru = """
+          ┌───────────────────────────┐
+          │   ┌─────────────────────┐ │
+          │   │ 1. Calcypython      │ │
+          │   │ 2.Старый калькулятор│ │    
+          │   │ 3. Игры             │ │
+          │   │ 4. Календарь        │ │
+          │   └─────────────────────┘ │
+          └───────────────────────────┘
+"""
+
 import random
 
 language = input("Choice language (1.ru/2.en):")
@@ -92,7 +103,7 @@ elif language == "1.ru" or language == "ru" or language == "1":
     
     print(choice)
     
-    print(apps)
+    print(apps_ru)
     
     choose = input("Выберите Приложения: ")
     while not choose:
