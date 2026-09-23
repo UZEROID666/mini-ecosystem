@@ -35,10 +35,10 @@ Built-in mini-games:
 🕐 Date & Time
 
 Displays the current date and time using Python's datetime module.
-🌍 Random Greetings
+# 🌍 Random Greetings
 
 Generates random greetings for the user.
-🛠️ Technologies
+# 🛠️ Technologies
 
     🐍 Python
     random
@@ -49,7 +49,7 @@ Generates random greetings for the user.
 
 # Languages 
     Russian (ru)
-    English (en)g
+    English (en)
 
 # ▶️ Running the Project
 
