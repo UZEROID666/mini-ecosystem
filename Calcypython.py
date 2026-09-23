@@ -35,11 +35,11 @@ error = """
           └──────────────────────┘
 """
 
-from ecosystem import language
+from config import language
 
 if language == "1.ru" or language == "ru" or language == "1":
-    from ecosystem import name
-    print(f"{name} Добро пожаловать")
+    from config import name_ru
+    print(f"{name_ru} Добро пожаловать")
     while True:
    
         print("""
@@ -109,7 +109,7 @@ if language == "1.ru" or language == "ru" or language == "1":
 
 
 elif language == "2.en" or language == "2" or language == "en":
-    from ecosystem import name
+    from config import name
     print(f"{name} Welcome")
     while True:
    
