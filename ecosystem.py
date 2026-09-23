@@ -43,10 +43,6 @@ if language == "2.en" or language == "2" or language == "en":
     time = datetime.now()
     print("Current date and time:", time)
 
-    name = input("Please enter your name: ")
-    while not name:
-        print("I think you forgot to enter your name... Maybe?")
-       
     from config import name
 
     random_helloword = [
@@ -76,7 +72,7 @@ if language == "2.en" or language == "2" or language == "en":
         from datetime import datetime
 
         print(calendar.calendar(datetime.now().year))
-    import ecosystem
+        import ecosystem
 
 elif language == "1.ru" or language == "ru" or language == "1":
     print("Ecosystem alpha starting...")
@@ -88,9 +84,6 @@ elif language == "1.ru" or language == "ru" or language == "1":
     print("Нынешнее дата и время:", time)
 
     from config import name_ru 
-    while not name_ru:
-        print("Я думаю вы забыли ввести имя... Наверное?")
-        from config import name_ru
     random_helloword = [
         "Привет, " + name_ru + "! Добро пожаловать в маленькую экосистему",
         "Ооо тут, " + name_ru + "! Проведём вместе время в экосистеме!",
@@ -117,5 +110,6 @@ elif language == "1.ru" or language == "ru" or language == "1":
         import calendar
         from datetime import datetime
     
-        print(calendar.calendar(datetime.now().year))   
+        print(calendar.calendar(datetime.now().year))
+        import ecosystem
         
