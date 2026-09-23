@@ -29,8 +29,7 @@ apps_ru = """
 """
 
 import random
-
-language = input("Choice language (1.ru/2.en):")
+from config import language
 while not language:
     print("Choice the language !!!!!!!!!!!!!!!!!")
     language = input("Choice language (1.ru/2.en):")
@@ -47,8 +46,8 @@ if language == "2.en" or language == "2" or language == "en":
     name = input("Please enter your name: ")
     while not name:
         print("I think you forgot to enter your name... Maybe?")
-        name = input("Please enter your name: ")
-
+       
+    from config import name
 
     random_helloword = [
         "Hello, " + name + "! Welcome to Mini-Ecosystem!",
@@ -87,16 +86,15 @@ elif language == "1.ru" or language == "ru" or language == "1":
     from datetime import datetime
     time = datetime.now()
     print("Нынешнее дата и время:", time)
-    
-    name = input("Пожалуйста введите своё имя: ")
-    while not name:
+
+    from config import name_ru 
+    while not name_ru:
         print("Я думаю вы забыли ввести имя... Наверное?")
-        name = input("Пожалуйста введите своё имя: ")
-    
+        from config import name_ru
     random_helloword = [
-        "Привет, " + name + "! Добро пожаловать в маленькую экосистему",
-        "Ооо тут, " + name + "! Проведём вместе время в экосистеме!",
-        "Ооо Привет, " + name + "! Желаю хорошего дня!"
+        "Привет, " + name_ru + "! Добро пожаловать в маленькую экосистему",
+        "Ооо тут, " + name_ru + "! Проведём вместе время в экосистеме!",
+        "Ооо Привет, " + name_ru + "! Желаю хорошего дня!"
     ]
     
     choice = random.choice(random_helloword)
@@ -120,4 +118,4 @@ elif language == "1.ru" or language == "ru" or language == "1":
         from datetime import datetime
     
         print(calendar.calendar(datetime.now().year))   
-    import ecosystem
+        

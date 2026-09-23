@@ -19,8 +19,9 @@ games_ru = """
 """
 
 import random
-from ecosystem import name, language 
+from config import language
 if language == "2.en" or language == "2" or language == "en":
+    from config import name
     print(f"{name} welcome")
     print(games)
     gc = input("Choice the game: ")
@@ -116,7 +117,8 @@ if language == "2.en" or language == "2" or language == "en":
         import games
 
 elif language == "1.ru" or language == "ru" or language == "1":
-    print(f"{name} Уэлком")
+    from config import name_ru
+    print(f"{name_ru} Уэлком")
     print(games_ru)
     gc = input("Выберите игру: ")
     if gc == "1" or gc == "Слот машина":
@@ -189,7 +191,7 @@ elif language == "1.ru" or language == "ru" or language == "1":
             elif choicer == "scissors" and player == "ножницы":
                 print(choicer)
                 print("Это ничья")
-            elif choicer == "scissors" and player == "камень":
+            elif choicer == "scissors" and player == "бумага":
                 print(choicer)
                 print("Ты проиграл :(")
             elif choicer == "scissors" and player == "камень":
