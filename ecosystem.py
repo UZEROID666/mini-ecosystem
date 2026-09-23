@@ -111,13 +111,13 @@ elif language == "1.ru" or language == "ru" or language == "1":
         choose = input("Выберите Приложения: ")
     if choose == "1" or choose == "Calcypython":
         import Calcypython  
-    elif choose == "2" or choose == "Old Calculator":
+    elif choose == "2" or choose == "Старый калькулятор":
         import Calcyold
-    elif choose == "3" or choose == "Games":
+    elif choose == "3" or choose == "Игры":
         import games
-    elif choose == "4" or choose == "Calendar":
+    elif choose == "4" or choose == "Календарь":
         import calendar
         from datetime import datetime
     
-        print(calendar.calendar(datetime.now().year))
+        print(calendar.calendar(datetime.now().year))   
     import ecosystem
