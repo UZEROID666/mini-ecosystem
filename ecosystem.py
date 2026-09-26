@@ -13,6 +13,7 @@ apps = """
           │   │ 2. Old Calculator   │ │    
           │   │ 3. Games            │ │
           │   │ 4. Calendar         │ │
+          │   │ 5. Useful sites     │ │
           │   └─────────────────────┘ │
           └───────────────────────────┘
           """
@@ -24,12 +25,13 @@ apps_ru = """
           │   │ 2.Старый калькулятор│ │    
           │   │ 3. Игры             │ │
           │   │ 4. Календарь        │ │
+          │   │ 5. Полезные сайты   │ │
           │   └─────────────────────┘ │
           └───────────────────────────┘
 """
 
 import random
-from config import language
+from config import language, sites_ai, sites_programming
 while not language:
     print("Choice the language !!!!!!!!!!!!!!!!!")
     language = input("Choice language (1.ru/2.en):")
@@ -73,6 +75,24 @@ if language == "2.en" or language == "2" or language == "en":
 
         print(calendar.calendar(datetime.now().year))
         import ecosystem
+    elif choose == "5" or choose == "Useful sites":
+        print("""
+              ┌────────────────────────┐
+              │   ┌──────────────────┐ │
+              │   │ 1.AI             │ │
+              │   │ 2.Programming    │ │
+              │   └──────────────────┘ │
+              └────────────────────────┘
+            """)
+        chice = input(f"Hello {name} please choice category: ")
+        while not chice:
+            chice = input("CHOICE Category!!!!: ")
+        if chice == "1" or chice == "AI":
+            print(sites_ai)
+            import ecosystem
+        elif chice == "2" or chice == "Programming":
+            print(sites_programming)
+            import ecosystem
 
 elif language == "1.ru" or language == "ru" or language == "1":
     print("Ecosystem alpha starting...")
@@ -112,4 +132,21 @@ elif language == "1.ru" or language == "ru" or language == "1":
     
         print(calendar.calendar(datetime.now().year))
         import ecosystem
-        
+    elif choose == "5" or choose == "Полезные сайты":
+        print("""
+          ┌────────────────────────┐
+          │   ┌──────────────────┐ │
+          │   │ 1.ИИ             │ │
+          │   │ 2.Программистам  │ │
+          │   └──────────────────┘ │
+          └────────────────────────┘
+        """)
+        chice = input(f"Привет {name} пожалуйста выбери категорию: ")
+        while not chice:
+            chice = input("выберите категорию!!!!: ")
+        if chice == "1" or chice == "ИИ":
+            print(sites_ai)
+            import ecosystem
+        elif chice == "2" or chice == "Программистам":
+            print(sites_programming)
+            import ecosystem
