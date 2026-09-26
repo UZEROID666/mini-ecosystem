@@ -76,23 +76,32 @@ if language == "2.en" or language == "2" or language == "en":
         print(calendar.calendar(datetime.now().year))
         import ecosystem
     elif choose == "5" or choose == "Useful sites":
-        print("""
-              ┌────────────────────────┐
-              │   ┌──────────────────┐ │
-              │   │ 1.AI             │ │
-              │   │ 2.Programming    │ │
-              │   └──────────────────┘ │
-              └────────────────────────┘
-            """)
-        chice = input(f"Hello {name} please choice category: ")
-        while not chice:
-            chice = input("CHOICE Category!!!!: ")
-        if chice == "1" or chice == "AI":
-            print(sites_ai)
-            import ecosystem
-        elif chice == "2" or chice == "Programming":
-            print(sites_programming)
-            import ecosystem
+        while True:
+            print("""
+                  ┌────────────────────────┐
+                  │   ┌──────────────────┐ │
+                  │   │ 1.AI             │ │
+                  │   │ 2.Programming    │ │
+                  │   └──────────────────┘ │
+                  └────────────────────────┘
+                """)
+            chice = input(f"Hello {name} please choice category: ")
+            while not chice:
+                chice = input("CHOICE Category!!!!: ")
+            if chice == "1" or chice == "AI":
+                print(sites_ai)
+                exit = input("Exit? (Y/n): ")
+                if exit == "Y" or exit == "y":
+                    break
+                elif exit == "n" or exit == "N":
+                    import ecosystem
+            elif chice == "2" or chice == "Programming":
+                print(sites_programming)
+                exit = input("Exit? (Y/n): ")
+                if exit == "Y" or exit == "y":
+                    break
+                elif exit == "n" or exit == "N":
+                    import ecosystem
 
 elif language == "1.ru" or language == "ru" or language == "1":
     print("Ecosystem alpha starting...")
@@ -133,20 +142,29 @@ elif language == "1.ru" or language == "ru" or language == "1":
         print(calendar.calendar(datetime.now().year))
         import ecosystem
     elif choose == "5" or choose == "Полезные сайты":
-        print("""
-          ┌────────────────────────┐
-          │   ┌──────────────────┐ │
-          │   │ 1.ИИ             │ │
-          │   │ 2.Программистам  │ │
-          │   └──────────────────┘ │
-          └────────────────────────┘
-        """)
-        chice = input(f"Привет {name} пожалуйста выбери категорию: ")
-        while not chice:
-            chice = input("выберите категорию!!!!: ")
-        if chice == "1" or chice == "ИИ":
-            print(sites_ai)
-            import ecosystem
-        elif chice == "2" or chice == "Программистам":
-            print(sites_programming)
-            import ecosystem
+        while True:
+            print("""
+            ┌────────────────────────┐
+            │   ┌──────────────────┐ │
+            │   │ 1.ИИ             │ │
+            │   │ 2.Программистам  │ │
+            │   └──────────────────┘ │
+            └────────────────────────┘
+            """)
+            chice = input(f"Привет {name_ru} пожалуйста выбери категорию: ")
+            while not chice:
+                chice = input("выберите категорию!!!!: ")
+            if chice == "1" or chice == "ИИ":
+                print(sites_ai)
+                exit = input("Выйти (Д/н): ")
+                if exit == "Д" or exit == "д":
+                    break
+                elif exit == "Н" or exit == "н":
+                    import ecosystem
+            elif chice == "2" or chice == "Программистам":
+                print(sites_programming)
+                exit = input("Выйти (Д/н): ")
+                if exit == "Д" or exit == "д":
+                    break
+                elif exit == "Н" or exit == "н":
+                    import ecosystem
