@@ -64,7 +64,7 @@ if language == "2.en" or language == "2" or language == "en":
         print("Choice THE APP !!!!!!!!!")
         choose = input("Choose an app: ")
     if choose == "1" or choose == "Calcypython":
-        import Calcypython  
+        import Calcypython_V2  
     elif choose == "2" or choose == "Old Calculator":
         import Calcyold
     elif choose == "3" or choose == "Games":
@@ -130,7 +130,7 @@ elif language == "1.ru" or language == "ru" or language == "1":
         print("Выберите ПРИЛОЖЕНИЕ!!!!!!")
         choose = input("Выберите Приложения: ")
     if choose == "1" or choose == "Calcypython":
-        import Calcypython  
+        import Calcypython_V2
     elif choose == "2" or choose == "Старый калькулятор":
         import Calcyold
     elif choose == "3" or choose == "Игры":
