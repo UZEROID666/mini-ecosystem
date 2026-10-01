@@ -96,8 +96,8 @@ elif language == "1.ru" or language == "ru" or language == "1":
     print(f"Добро пожаловать в калькулятор {name_ru}")
     while True:
         num1 = int(input("введите первое число: "))
-        num2 = int(input("введите второе число: "))
         choice = input("выберите операцию (+, -, *, /, //, **, %, q чтобы выйти): ")
+        num2 = int(input("введите второе число: "))
 
         if choice == "q":
             break
