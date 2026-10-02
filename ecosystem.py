@@ -14,6 +14,7 @@ apps = """
           │   │ 3. Games            │ │
           │   │ 4. Calendar         │ │
           │   │ 5. Useful sites     │ │
+          │   │ 6. Timer            │ │
           │   └─────────────────────┘ │
           └───────────────────────────┘
           """
@@ -26,6 +27,7 @@ apps_ru = """
           │   │ 3. Игры             │ │
           │   │ 4. Календарь        │ │
           │   │ 5. Полезные сайты   │ │
+          │   │ 6. Таймер           │ │
           │   └─────────────────────┘ │
           └───────────────────────────┘
 """
@@ -102,15 +104,27 @@ if language == "2.en" or language == "2" or language == "en":
                     break
                 elif exit == "n" or exit == "N":
                     import ecosystem
-
+    elif choose == "6" or choose == "Timer":
+        import time
+        seconds = input("Start timer (y/n): ")
+        if seconds in ("y", "Y"):
+            seconds = int(input("Enter seconds: "))
+            print("Timer started for", seconds, "seconds.")
+            time.sleep(seconds)
+            print("Time's up!")
+            import ecosystem
+        elif seconds in ("n", "N"):
+            import ecosystem
+        else:
+            print("Invalid input. Please enter 'y' or 'n'.")
+            import ecosystem
 elif language == "1.ru" or language == "ru" or language == "1":
     print("Ecosystem alpha starting...")
     
     print("Добро пожаловать")
     print("ССылка на мой Github Профиль (там же выходят обновления) : https://github.com/uzeroid666")
     from datetime import datetime
-    time = datetime.now()
-    print("Нынешнее дата и время:", time)
+    print("Нынешнее дата и время:", datetime.now())
 
     from config import name_ru 
     random_helloword = [
@@ -168,3 +182,17 @@ elif language == "1.ru" or language == "ru" or language == "1":
                     break
                 elif exit == "Н" or exit == "н":
                     import ecosystem
+    elif choose == "6" or choose == "Таймер":
+        import time
+        seconds = input("Запустить таймер (Д/н): ")
+        if seconds in ("Д", "д"):
+            seconds = int(input("Введите секунды: "))
+            print("Таймер запущен на", seconds, "секунд.")
+            time.sleep(seconds)
+            print("Время вышло!")
+            import ecosystem
+        elif seconds in ("Н", "н"):
+            import ecosystem
+        else:
+            print("Неверный ввод. Пожалуйста, введите 'д' или 'н'.")
+            import ecosystem
