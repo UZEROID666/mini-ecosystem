@@ -118,6 +118,10 @@ if language == "2.en" or language == "2" or language == "en":
         else:
             print("Invalid input. Please enter 'y' or 'n'.")
             import ecosystem
+
+    else:
+        print("Invalid choice. Please select a valid app.")
+        import ecosystem
 elif language == "1.ru" or language == "ru" or language == "1":
     print("Ecosystem alpha starting...")
     
@@ -196,3 +200,6 @@ elif language == "1.ru" or language == "ru" or language == "1":
         else:
             print("Неверный ввод. Пожалуйста, введите 'д' или 'н'.")
             import ecosystem
+    else:
+        print("Неверный выбор. Пожалуйста, выберите правильное приложение.")
+        import ecosystem
