@@ -74,35 +74,15 @@ if language == "2.en" or language == "2" or language == "en":
             psr = "rock" , "paper" , "scissors"
             choicer = random.choice(psr)
             player = input("Rock, Paper or scissors?: ")
-            if choicer == "rock" and player == "rock":
+            if (player == "rock" and choicer == "scissors") or (player == "scissors" and choicer == "paper") or (player == "paper" and choicer == "rock"):
                 print(choicer)
-                print("It's a draw")
-            elif choicer == "rock" and player == "scissors":
+                print("You Win!")
+            elif player == choicer:
                 print(choicer)
-                print("You lost :(")
-            elif choicer == "rock" and player == "paper":
-                print(choicer)
-                print("You win!")
-            elif choicer == "paper" and player == "paper":
-                print(choicer)
-                print("It's a draw")
-            elif choicer == "paper" and player == "scissors":
-                print(choicer)
-                print("You win!")
-            elif choicer == "paper" and player == "rock":
-                print(choicer)
-                print("You lost :(")
-            elif choicer == "scissors" and player == "scissors":
-                print(choicer)
-                print("It's a draw")
-            elif choicer == "scissors" and player == "paper":
-                print(choicer)
-                print("You lost :(")
-            elif choicer == "scissors" and player == "rock":
-                print(choicer)
-                print("You win!")
+                print("Draw")
             else:
-                print("Wrong word❌")
+                print(choicer)
+                print("You Lose :(")
     elif gc == "3" or gc == "Guess the number":
         while True:
             rn = random.randint(1, 1000)
@@ -167,38 +147,18 @@ elif language == "1.ru" or language == "ru" or language == "1":
             
     elif gc == "2" or gc == "К.Н.Б":
         while True:
-            psr = "rock" , "paper" , "scissors"
+            psr = "камень", "бумага", "ножницы"
             choicer = random.choice(psr)
             player = input("камень , ножницы или бумага?: ")
-            if choicer == "rock" and player == "камень":
-                print(choicer)
-                print("Это ничья")
-            elif choicer == "rock" and player == "ножницы":
-                print(choicer)
-                print("Ты проиграл :(")
-            elif choicer == "rock" and player == "бумага":
+            if (player == "камень" and choicer == "ножницы") or (player == "ножницы" and choicer == "бумага") or (player == "бумага" and choicer == "камень"):
                 print(choicer)
                 print("Ты выиграл!")
-            elif choicer == "paper" and player == "бумага":
+            elif player == choicer:
                 print(choicer)
-                print("Это ничья")
-            elif choicer == "paper" and player == "ножницы":
-                print(choicer)
-                print("Ты выиграл!")
-            elif choicer == "paper" and player == "камень":
-                print(choicer)
-                print("Ты проиграл :(")
-            elif choicer == "scissors" and player == "ножницы":
-                print(choicer)
-                print("Это ничья")
-            elif choicer == "scissors" and player == "бумага":
-                print(choicer)
-                print("Ты проиграл :(")
-            elif choicer == "scissors" and player == "камень":
-                print(choicer)
-                print("Ты победил!")
+                print("Ничья")
             else:
-                print("Ошибка❌")
+                print(choicer)
+                print("Ты проиграл :(")
     elif gc == "3" or gc == "Угадай число":
         while True:
             rn = random.randint(1, 1000)
